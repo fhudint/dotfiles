@@ -26,11 +26,18 @@ that make a workspace feel like home. The goals are simple:
 
 | Component | Choice       |
 | --------- | ------------ |
-| OS        | Fedora Linux |
+| OS        | Fedora Linux (KDE Plasma Edition) |
 | Shell     | Zsh          |
 | Editor    | VS Code      |
+| Desktop   | KDE Plasma, via [caelestia-kde](https://github.com/ladybug-me/caelestia-kde) |
 
-> This table will grow as the repo does (terminal, WM/DE, fonts, theme).
+> This table will grow as the repo does (terminal, fonts, theme).
+
+## ◈ Desktop: Fedora KDE
+
+I run the **Fedora KDE Plasma Edition**, and my desktop setup is based on
+[ladybug-me/caelestia-kde](https://github.com/ladybug-me/caelestia-kde).
+Head over to that repo for the full details and install instructions.
 
 ## ◈ Structure
 
