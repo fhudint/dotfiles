@@ -1,0 +1,6 @@
+#!/usr/bin/sh
+# Wrapper around the stock 10_linux that drops the "Loading Linux ..." /
+# "Loading initial ramdisk ..." echo lines from the generated menu entries.
+# The original 10_linux stays untouched (and must be made non-executable so
+# the entries are not generated twice): chmod -x /etc/grub.d/10_linux
+sh /etc/grub.d/10_linux | sed '/^[[:space:]]*echo[[:space:]]/d'
