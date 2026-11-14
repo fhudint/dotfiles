@@ -80,24 +80,30 @@ Rollback: restore `grub.cfg.bak` and run `sudo chmod +x /etc/grub.d/10_linux`.
 
 The GRUB theme is my fork of [harishnkr/bsol](https://github.com/harishnkr/bsol)
 at [fhudint/bsol](https://github.com/fhudint/bsol), with a few personal
-adjustments. It is included as a git submodule at `boot/grub-themes/bsol` (it is
-GPL-3.0 too, and linking it keeps its own history and license intact). All
-credit for the original design goes to the upstream author.
+adjustments (Victor Mono italic fonts swapped for regular/bold). It is included
+as a git submodule at `boot/grub-themes/bsol` (it is GPL-3.0 too, and linking it
+keeps its own history and license intact). All credit for the original design
+goes to the upstream author.
 
 ```bash
 # fetch the submodule (skip if you cloned with --recurse-submodules)
 git submodule update --init
 
-# install the theme
+# install the theme (replace the old folder so stale font files don't linger)
 sudo mkdir -p /boot/grub2/themes
+sudo rm -rf /boot/grub2/themes/bsol
 sudo cp -r boot/grub-themes/bsol/bsol /boot/grub2/themes/bsol
 ```
 
-Then point GRUB at it in `/etc/default/grub` and regenerate the config as above:
+Then point GRUB at it in `/etc/default/grub`:
 
 ```sh
 GRUB_THEME="/boot/grub2/themes/bsol/theme.txt"
 ```
+
+> ⚠️ Always regenerate `grub.cfg` after installing or changing the theme (same
+> `grub2-mkconfig` steps as above). The fonts to load are listed in `grub.cfg`
+> at generation time, so it will reference missing font files if it is stale.
 
 ## ◈ Structure
 
