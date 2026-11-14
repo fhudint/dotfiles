@@ -78,9 +78,11 @@ Rollback: restore `grub.cfg.bak` and run `sudo chmod +x /etc/grub.d/10_linux`.
 
 ### Theme: bsol
 
-The GRUB theme is [harishnkr/bsol](https://github.com/harishnkr/bsol), included
-as a git submodule at `boot/grub-themes/bsol` (it is GPL-3.0 too, and linking
-it keeps its own history and license intact).
+The GRUB theme is my fork of [harishnkr/bsol](https://github.com/harishnkr/bsol)
+at [fhudint/bsol](https://github.com/fhudint/bsol), with a few personal
+adjustments. It is included as a git submodule at `boot/grub-themes/bsol` (it is
+GPL-3.0 too, and linking it keeps its own history and license intact). All
+credit for the original design goes to the upstream author.
 
 ```bash
 # fetch the submodule (skip if you cloned with --recurse-submodules)
@@ -104,7 +106,7 @@ dotfiles/
 ├── boot/
 │   ├── 10_linux_quiet
 │   └── grub-themes/
-│       └── bsol/          # git submodule (harishnkr/bsol)
+│       └── bsol/          # git submodule (fork of harishnkr/bsol)
 ├── LICENSE
 └── README.md
 ```
