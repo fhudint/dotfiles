@@ -7,7 +7,7 @@
 ![Fedora](https://img.shields.io/badge/Fedora-51A2DA?style=for-the-badge&logo=fedora&logoColor=white)
 ![Zsh](https://img.shields.io/badge/Zsh-F15A24?style=for-the-badge&logo=gnubash&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-a6e3a1?style=for-the-badge)
+![License](https://img.shields.io/badge/License-GPL--3.0-a6e3a1?style=for-the-badge)
 
 </div>
 
@@ -79,8 +79,8 @@ Rollback: restore `grub.cfg.bak` and run `sudo chmod +x /etc/grub.d/10_linux`.
 ### Theme: bsol
 
 The GRUB theme is [harishnkr/bsol](https://github.com/harishnkr/bsol), included
-as a git submodule at `boot/grub-themes/bsol` (it is GPL-3.0, so it is linked
-rather than copied into this MIT-licensed repo).
+as a git submodule at `boot/grub-themes/bsol` (it is GPL-3.0 too, and linking
+it keeps its own history and license intact).
 
 ```bash
 # fetch the submodule (skip if you cloned with --recurse-submodules)
@@ -132,7 +132,7 @@ Note the theme colors here, for example:
 
 ## ◈ License
 
-Released under the license in [LICENSE](LICENSE).
+Released under the [GNU General Public License v3.0](LICENSE).
 
 ---
 
