@@ -1,0 +1,3 @@
+[submodule "boot/grub-themes/bsol"]
+	path = boot/grub-themes/bsol
+	url = https://github.com/harishnkr/bsol.git

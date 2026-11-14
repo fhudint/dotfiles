@@ -76,12 +76,35 @@ sudo cp /tmp/grub.cfg.new /boot/grub2/grub.cfg
 
 Rollback: restore `grub.cfg.bak` and run `sudo chmod +x /etc/grub.d/10_linux`.
 
+### Theme: bsol
+
+The GRUB theme is [harishnkr/bsol](https://github.com/harishnkr/bsol), included
+as a git submodule at `boot/grub-themes/bsol` (it is GPL-3.0, so it is linked
+rather than copied into this MIT-licensed repo).
+
+```bash
+# fetch the submodule (skip if you cloned with --recurse-submodules)
+git submodule update --init
+
+# install the theme
+sudo mkdir -p /boot/grub2/themes
+sudo cp -r boot/grub-themes/bsol/bsol /boot/grub2/themes/bsol
+```
+
+Then point GRUB at it in `/etc/default/grub` and regenerate the config as above:
+
+```sh
+GRUB_THEME="/boot/grub2/themes/bsol/theme.txt"
+```
+
 ## ◈ Structure
 
 ```text
 dotfiles/
 ├── boot/
-│   └── 10_linux_quiet
+│   ├── 10_linux_quiet
+│   └── grub-themes/
+│       └── bsol/          # git submodule (harishnkr/bsol)
 ├── LICENSE
 └── README.md
 ```
@@ -92,7 +115,7 @@ The structure will expand as new configs land, e.g. `zsh/`, `git/`, `vscode/`.
 
 ```bash
 # 1. clone
-git clone https://github.com/fhudint/dotfiles.git ~/Projects/dotfiles
+git clone --recurse-submodules https://github.com/fhudint/dotfiles.git ~/Projects/dotfiles
 cd ~/Projects/dotfiles
 
 # 2. symlink the configs you need (example)
